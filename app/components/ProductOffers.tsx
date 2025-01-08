@@ -1,11 +1,11 @@
-import { Package2, Tag, ShoppingCart } from 'lucide-react';
+import { Package2, Tag, ShoppingCart } from "lucide-react";
 
 const ProductOffers = () => {
   const offers = [
     {
       title: "Envío Gratis",
       description: "En tu primera compra internacional",
-      price: "$0",
+      price: "₡0",
       icon: <Package2 className="w-8 h-8 text-white" />
     },
     {
@@ -17,7 +17,7 @@ const ProductOffers = () => {
     {
       title: "Compra Asistida",
       description: "Te ayudamos con tus compras",
-      price: "$9.99",
+      price: "₡5000",
       icon: <ShoppingCart className="w-8 h-8 text-white" />
     }
   ];

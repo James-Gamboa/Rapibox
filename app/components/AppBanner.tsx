@@ -1,4 +1,4 @@
-import { Smartphone, Download, Star } from 'lucide-react';
+import { Smartphone, Download, Star } from "lucide-react";
 
 const AppBanner = () => {
   return (
