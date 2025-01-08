@@ -17,17 +17,33 @@ export default function ContactSection() {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-green-600 mr-2 mt-1" />
                 <div>
-                  <h4 className="font-semibold">Sucursal Principal</h4>
-                  <p className="text-gray-600">123 Calle Principal, Ciudad</p>
-                  <p className="text-gray-600">Tel: +1 234 567 890</p>
+                  <h4 className="font-semibold">Sucursal San José</h4>
+                  <p className="text-gray-600">123 Calle Principal, San José, Costa Rica</p>
+                  <p className="text-gray-600">Tel: +506 234 567 890</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-green-600 mr-2 mt-1" />
                 <div>
-                  <h4 className="font-semibold">Sucursal Norte</h4>
-                  <p className="text-gray-600">456 Avenida Norte, Ciudad</p>
-                  <p className="text-gray-600">Tel: +1 234 567 891</p>
+                  <h4 className="font-semibold">Sucursal Heredia</h4>
+                  <p className="text-gray-600">456 Avenida Norte, Heredia, Costa Rica</p>
+                  <p className="text-gray-600">Tel: +506 234 567 891</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <MapPin className="h-5 w-5 text-green-600 mr-2 mt-1" />
+                <div>
+                  <h4 className="font-semibold">Sucursal Alajuela</h4>
+                  <p className="text-gray-600">789 Calle Oeste, Alajuela, Costa Rica</p>
+                  <p className="text-gray-600">Tel: +506 234 567 892</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <MapPin className="h-5 w-5 text-green-600 mr-2 mt-1" />
+                <div>
+                  <h4 className="font-semibold">Sucursal Cartago</h4>
+                  <p className="text-gray-600">1011 Avenida Sur, Cartago, Costa Rica</p>
+                  <p className="text-gray-600">Tel: +506 234 567 893</p>
                 </div>
               </div>
             </div>
@@ -54,4 +70,4 @@ export default function ContactSection() {
       </div>
     </section>
   );
-} 
+}
