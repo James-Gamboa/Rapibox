@@ -21,12 +21,12 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -73,10 +73,10 @@ export default function Home() {
               </svg>
             </button>
             <nav className="hidden lg:flex items-center space-x-6">
-              <a href="#services" className="text-gray-600 hover:text-green-600">Servicios</a>
-              <a href="#benefits" className="text-gray-600 hover:text-green-600">Programas y beneficios</a>
-              <a href="#tools" className="text-gray-600 hover:text-green-600">Herramientas</a>
-              <a href="#contact" className="text-gray-600 hover:text-green-600">Contáctenos</a>
+              <Link href="#services" className="text-gray-600 hover:text-green-600">Servicios</Link>
+              <Link href="#benefits" className="text-gray-600 hover:text-green-600">Programas y beneficios</Link>
+              <Link href="#tools" className="text-gray-600 hover:text-green-600">Herramientas</Link>
+              <Link href="#contact" className="text-gray-600 hover:text-green-600">Contáctenos</Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="flex items-center space-x-2">
@@ -325,24 +325,24 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Enlaces rápidos</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Servicios</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Calculadora</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Preavisos</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Mis paquetes</a></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white">Servicios</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white">Calculadora</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white">Preavisos</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white">Mis paquetes</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Síguenos</h4>
               <div className="flex space-x-4">
-                <a href="#" className="hover:text-green-500">
+                <Link href="#" className="hover:text-green-500">
                   <Facebook className="h-6 w-6" />
-                </a>
-                <a href="#" className="hover:text-green-500">
+                </Link>
+                <Link href="#" className="hover:text-green-500">
                   <Twitter className="h-6 w-6" />
-                </a>
-                <a href="#" className="hover:text-green-500">
+                </Link>
+                <Link href="#" className="hover:text-green-500">
                   <Instagram className="h-6 w-6" />
-                </a>
+                </Link>
               </div>
             </div>
             <div>
@@ -357,9 +357,6 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Rapibox. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
