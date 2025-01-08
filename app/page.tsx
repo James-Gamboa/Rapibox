@@ -16,22 +16,24 @@ import {
   Bell,
   FileText,
   DollarSign,
-  ShieldCheck
+  ShieldCheck,
+  X
 } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
+} from "@/components/dropdown-menu";
+import { Button } from "@/components/button";
+import { Input } from "@/components/input";
+import { Card } from "@/components/card";
 import Link from "next/link";
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const slides = [
     {
@@ -58,56 +60,93 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      <header className="sticky top-0 z-50 bg-white border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <Package className="h-8 w-8 text-green-600" />
-              <span className="ml-2 text-xl font-bold text-green-600">Rapibox</span>
-            </div>
-            <button className="lg:hidden p-2">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            <nav className="hidden lg:flex items-center space-x-6">
-              <Link href="#services" className="text-gray-600 hover:text-green-600">Servicios</Link>
-              <Link href="#benefits" className="text-gray-600 hover:text-green-600">Programas y beneficios</Link>
-              <Link href="#tools" className="text-gray-600 hover:text-green-600">Herramientas</Link>
-              <Link href="#contact" className="text-gray-600 hover:text-green-600">Contáctenos</Link>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center space-x-2">
-                    <User className="h-5 w-5" />
-                    <span>Iniciar Sesión</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 p-4">
-                  <div className="space-y-4">
-                    <Input
-                      type="email"
-                      placeholder="Correo electrónico"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <Input
-                      type="password"
-                      placeholder="Contraseña"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                      Ingresar
-                    </Button>
-                  </div>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </nav>
+    <header className="sticky top-0 z-50 bg-white border-b">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <span className="ml-2 text-xl font-bold text-green-600">Rapibox</span>
           </div>
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? (
+              <button onClick={closeMenu} className="p-2">
+                <X className="h-6 w-6 text-gray-800" />
+              </button>
+            ) : (
+              <>
+                <span className="block w-6 h-1 bg-gray-800 mb-1"></span>
+                <span className="block w-6 h-1 bg-gray-800 mb-1"></span>
+                <span className="block w-6 h-1 bg-gray-800"></span>
+              </>
+            )}
+          </button>
+          <nav
+            className={`${
+              menuOpen ? "fixed inset-0 bg-white/90 flex flex-col items-center justify-center" : "hidden"
+            } lg:flex lg:flex-row items-center space-x-6`}
+          >
+            <Link href="#services" className="text-gray-600 hover:text-green-600">
+              Servicios
+            </Link>
+            <Link href="#benefits" className="text-gray-600 hover:text-green-600">
+              Programas y beneficios
+            </Link>
+            <Link href="#tools" className="text-gray-600 hover:text-green-600">
+              Herramientas
+            </Link>
+            <Link href="#contact" className="text-gray-600 hover:text-green-600">
+              Contáctenos
+            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center space-x-2">
+                  <User className="h-5 w-5" />
+                  <span>Iniciar Sesión</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-64 p-4">
+                <div className="space-y-4">
+                  <Input
+                    type="email"
+                    placeholder="Correo electrónico"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <Input
+                    type="password"
+                    placeholder="Contraseña"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                    Ingresar
+                  </Button>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </nav>
         </div>
-      </header>
+      </div>
+    </header>
       <section className="relative bg-gray-900 h-[500px] overflow-hidden">
         {slides.map((slide, index) => (
           <div
@@ -367,4 +406,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+} 
