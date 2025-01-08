@@ -1,6 +1,6 @@
-import React from 'react';
 import { User, Menu } from 'lucide-react';
-
+import { useEffect } from 'react';
+import Link from 'next/link';
 interface HeaderProps {
   menuOpen: boolean;
   setMenuOpen: (value: boolean) => void;
@@ -20,7 +20,7 @@ export default function Header({
 }: HeaderProps) {
   const closeMenu = () => setMenuOpen(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -66,14 +66,14 @@ export default function Header({
               bg-white/80 rounded-lg lg:bg-transparent lg:p-0
             `}>
               {menuItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
                   href={item.href}
                   className="text-gray-700 hover:text-green-600 transition-colors duration-200"
                   onClick={closeMenu}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="lg:hidden">
                 <button 

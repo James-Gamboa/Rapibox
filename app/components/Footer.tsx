@@ -8,8 +8,9 @@ import Link from "next/link";
 const quickLinks = [
   { title: "Servicios", href: "#" },
   { title: "Calculadora", href: "#" },
-  { title: "Preavisos", href: "#" },
-  { title: "Mis paquetes", href: "#" }
+  { title: "Mis paquetes", href: "#" },
+  { title: "Exoneración", href: "#" },
+  { title: "Pago en línea", href: "#" }
 ];
 
 const socialLinks = [
@@ -51,6 +52,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
+          
           <div>
             <h4 className="text-lg font-semibold mb-4 text-green-700">Newsletter</h4>
             <div className="flex">

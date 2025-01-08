@@ -1,7 +1,9 @@
-import * as React from "react";
+'use client';
+
+import { forwardRef, HTMLAttributes } from "react";
 import { cn } from "@/app/lib/utils";
 
-const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}

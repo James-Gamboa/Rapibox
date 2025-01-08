@@ -1,4 +1,3 @@
-import React from 'react';
 import { Smartphone, Download, Star } from 'lucide-react';
 
 const AppBanner = () => {
@@ -33,7 +32,7 @@ const AppBanner = () => {
             <div className="flex flex-wrap gap-4">
               <button className="bg-white text-green-600 px-8 py-3 rounded-lg flex items-center hover:bg-green-50 transition duration-300">
                 <img
-                  src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?auto=format&fit=crop&q=80&w=50"
+                  src="https://i.postimg.cc/jSkTc62Q/Hamzasaleem-Stock-Style-3-App-store-512.png"
                   alt="App Store"
                   className="w-6 h-6 mr-2"
                 />
@@ -41,7 +40,7 @@ const AppBanner = () => {
               </button>
               <button className="bg-white text-green-600 px-8 py-3 rounded-lg flex items-center hover:bg-green-50 transition duration-300">
                 <img
-                  src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?auto=format&fit=crop&q=80&w=50"
+                  src="https://i.postimg.cc/bvDhBG2X/Dtafalonso-Android-L-Play-Store-512.png"
                   alt="Play Store"
                   className="w-6 h-6 mr-2"
                 />
@@ -51,7 +50,7 @@ const AppBanner = () => {
           </div>
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
+              src="https://i.postimg.cc/0NF8kGq2/photo-1512941937669-90a1b58e7e9c.avif"
               alt="Rapibox Mobile App"
               className="rounded-lg shadow-2xl mx-auto"
             />

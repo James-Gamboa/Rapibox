@@ -1,20 +1,32 @@
 "use client";
 
-import * as React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/app/components/button";
 
 interface CarouselProps {
-  slides: {
-    image: string;
-    title: string;
-    description: string;
-  }[];
   currentSlide: number;
   setCurrentSlide: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const Carousel = ({ slides, currentSlide, setCurrentSlide }: CarouselProps) => {
+export const Carousel = ({ currentSlide, setCurrentSlide }: CarouselProps) => {
+  const slides = [
+    {
+      image: "https://i.postimg.cc/9FbCRHjk/claudio-schwarz-q8k-R-ie6-Wn-I-unsplash.jpg",
+      title: "Envíos Internacionales Seguros",
+      description: "Compra en USA y recibe en tu país"
+    },
+    {
+      image: "https://i.postimg.cc/XNwVWy14/amazon-paquetes-mensajeria-entregas.jpg",
+      title: "Entregas Rápidas",
+      description: "Recibe tus paquetes en tiempo récord"
+    },
+    {
+      image: "https://i.postimg.cc/yxzs9VdM/paquetes-perdidos-perdida-clientes-1140x641.webp",
+      title: "Precios Competitivos",
+      description: "Las mejores tarifas del mercado"
+    }
+  ];
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);

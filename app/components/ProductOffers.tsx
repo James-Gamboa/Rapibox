@@ -1,4 +1,3 @@
-import React from 'react';
 import { Package2, Tag, ShoppingCart } from 'lucide-react';
 
 const ProductOffers = () => {

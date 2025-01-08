@@ -1,23 +1,22 @@
-import React from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 
 const News = () => {
   const news = [
     {
-      image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&q=80&w=800",
-      date: "Mar 15, 2024",
+      image: "https://i.postimg.cc/xTn91TBH/gestion-rutas-1-12.avif",
+      date: "Enero 15, 2025",
       title: "Nuevas rutas de envío disponibles",
       excerpt: "Ampliamos nuestras rutas para llegar a más destinos..."
     },
     {
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
-      date: "Mar 12, 2024",
+      image: "https://i.postimg.cc/NF7YkW25/photo-1586528116311-ad8dd3c8310d.avif",
+      date: "Enero 12, 2025",
       title: "Guía de compras internacionales",
       excerpt: "Aprende a comprar de forma segura en tiendas extranjeras..."
     },
     {
-      image: "https://images.unsplash.com/photo-1565732828362-909e6d53f916?auto=format&fit=crop&q=80&w=800",
-      date: "Mar 10, 2024",
+      image: "https://i.postimg.cc/4dcXmKJv/the-concept-of-providing-a-five-star-premium-service-businessman-showing-award-high-standards-are-gu.jpg",
+      date: "Enero 10, 2025",
       title: "Nuevos servicios premium",
       excerpt: "Conoce nuestros nuevos servicios exclusivos..."
     }
