@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { useState, useEffect } from "react";
 import Header from "@/app/components/Header";
 import { Carousel } from "@/app/components/carousel";
@@ -12,16 +13,12 @@ import News from "@/app/components/News";
 export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [currentSlide, setCurrentSlide] = useState<number | null>(null);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     setCurrentSlide(0);
   }, []);
-
-  if (currentSlide === null) {
-    return null;
-  }
 
   return (
     <div className="min-h-screen bg-white">
