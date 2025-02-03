@@ -1,6 +1,6 @@
 import { Package, Calculator, ShieldCheck, DollarSign } from "lucide-react";
 
-export const ServiceGrid = () => {
+const Service = () => {
   return (
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
@@ -32,4 +32,4 @@ export const ServiceGrid = () => {
   );
 };
 
-export default ServiceGrid; 
+export default Service; 

@@ -1,8 +1,8 @@
 "use client"
 
 import { Facebook, Twitter, Instagram, ChevronRight } from "lucide-react";
-import { Button } from "@/app/components/button";
-import { Input } from "@/app/components/input";
+import { Button } from "@/app/components/Button/page";
+import { Input } from "@/app/components/Input/page";
 import Link from "next/link";
 
 const quickLinks = [

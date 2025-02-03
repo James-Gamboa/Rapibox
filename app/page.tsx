@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Header from "@/app/components/Header";
-import { Carousel } from "@/app/components/carousel";
-import { ServiceGrid } from "@/app/components/ServiceGrid";
-import Footer from "@/app/components/Footer";
-import ContactSection from "@/app/components/ContactSection";
-import AppBanner from "@/app/components/AppBanner";
-import ProductOffers from "@/app/components/ProductOffers";
-import News from "@/app/components/News";
+import Header from "@/app/components/Header/page";
+import { Carousel } from "@/app/components/Carousel/page";
+import Service  from "@/app/components/Service/page";
+import Footer from "@/app/components/Footer/page";
+import ContactSection from "@/app/components/ContactSection/page";
+import AppBanner from "@/app/components/AppBanner/page";
+import ProductOffers from "@/app/components/ProductOffers/page";
+import News from "@/app/components/News/page";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -21,10 +21,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-100">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} email={email} setEmail={setEmail} password={password} setPassword={setPassword} />
       <Carousel currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} />
-      <ServiceGrid />
+      <Service />
       <ProductOffers />
       <News />
       <AppBanner />

@@ -1,6 +1,6 @@
 import { Calendar, ArrowRight } from "lucide-react";
 
-const News = () => {
+const news = () => {
   const news = [
     {
       image: "https://i.postimg.cc/xTn91TBH/gestion-rutas-1-12.avif",
@@ -61,4 +61,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default news;

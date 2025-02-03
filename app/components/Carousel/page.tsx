@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Button } from "@/app/components/button";
+import { useEffect } from "react";
+import { Button } from "@/app/components/Button/page";
 
 interface CarouselProps {
   currentSlide: number;

@@ -20,8 +20,15 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "noEmitOnError": false,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/carousel"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/components/carousel"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,9 +1,9 @@
 "use client"
 
 import { MapPin } from "lucide-react";
-import { Card } from "@/app/components/card";
-import { Input } from "@/app/components/input";
-import { Button } from "@/app/components/button";
+import { Card } from "@/app/components/Card/page";
+import { Input } from "@/app/components/Input/page";
+import { Button } from "@/app/components/Button/page";
 
 export default function ContactSection() {
   return (
