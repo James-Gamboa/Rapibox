@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "@/app/components/Header/page";
 import { Carousel } from "@/app/components/Carousel/page";
-import Service  from "@/app/components/Service/page";
+import Service from "@/app/components/Service/page";
 import Footer from "@/app/components/Footer/page";
 import ContactSection from "@/app/components/ContactSection/page";
 import AppBanner from "@/app/components/AppBanner/page";
@@ -13,12 +13,8 @@ import News from "@/app/components/News/page";
 export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    setCurrentSlide(0);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100">

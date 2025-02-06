@@ -1,4 +1,5 @@
 import { Smartphone, Download, Star } from "lucide-react";
+import Image from 'next/image';
 
 const AppBanner = () => {
   return (
@@ -49,10 +50,12 @@ const AppBanner = () => {
             </div>
           </div>
           <div className="relative">
-            <img
+            <Image
               src="https://i.postimg.cc/0NF8kGq2/photo-1512941937669-90a1b58e7e9c.avif"
               alt="Rapibox Mobile App"
               className="rounded-lg shadow-2xl mx-auto"
+              layout="fill"
+              objectFit="cover"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
               <div className="flex items-center">

@@ -1,7 +1,7 @@
 "use client"
 
 import { Facebook, Twitter, Instagram, ChevronRight } from "lucide-react";
-import { Button } from "@/app/components/Button/page";
+import Button from "@/app/components/Button";
 import { Input } from "@/app/components/Input/page";
 import Link from "next/link";
 
