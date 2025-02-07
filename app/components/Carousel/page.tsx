@@ -3,12 +3,12 @@
 import { useEffect } from "react";
 import Button from "@/app/components/Button";
 
-interface CarouselProps {
+type CarouselProps = {
   currentSlide: number;
-  setCurrentSlide: React.Dispatch<React.SetStateAction<number>>;
+  setCurrentSlide: (value: number | ((prev: number) => number)) => void;
 }
 
-export const Carousel = ({ currentSlide, setCurrentSlide }: CarouselProps) => {
+const Carousel = ({ currentSlide, setCurrentSlide }: CarouselProps) => {
   const slides = [
     {
       image: "https://i.postimg.cc/9FbCRHjk/claudio-schwarz-q8k-R-ie6-Wn-I-unsplash.jpg",
@@ -64,3 +64,5 @@ export const Carousel = ({ currentSlide, setCurrentSlide }: CarouselProps) => {
     </section>
   );
 };
+
+export default Carousel;

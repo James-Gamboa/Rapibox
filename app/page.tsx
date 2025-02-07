@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Header from "@/app/components/Header/page";
-import { Carousel } from "@/app/components/Carousel/page";
+import Carousel from "@/app/components/Carousel/page";
 import Service from "@/app/components/Service/page";
 import Footer from "@/app/components/Footer/page";
 import ContactSection from "@/app/components/ContactSection/page";
